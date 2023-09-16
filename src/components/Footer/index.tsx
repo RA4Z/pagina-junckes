@@ -13,7 +13,7 @@ export default function Footer() {
                 <Logo style={{ width: 100, height: 100 }} />
             </footer>
             <footer className={styles.creditos}>
-                <p>Projetado e desenvolvido por Robert Aron Zimmermann, robert.raz@gmail.com</p>
+                <p>Projetado e desenvolvido por Robert Aron Zimmermann, robertz.raz@gmail.com</p>
             </footer>
         </>
     );
