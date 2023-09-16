@@ -7,16 +7,16 @@ import { Prato } from 'types/Prato';
 
 export default function Inicio() {
     let pratosRecomendados = [...cardapio];
-    pratosRecomendados = pratosRecomendados.sort(() => 0.5 - Math.random()).splice(0,3);
+    pratosRecomendados = pratosRecomendados.sort(() => 0.5 - Math.random()).splice(0, 3);
     const navigate = useNavigate();
 
     function redirecionarParaDetalhes(prato: Prato) {
-        navigate(`/prato/${prato.id}`, {state: {prato}, replace: true});
+        navigate(`/prato/${prato.id}`, { state: { prato }, replace: true });
     }
-    return(
+    return (
         <section>
             <h3 className={stylesTema.titulo}>
-                Recomendações da cozinha
+                Confira alguns de nossos produtos abaixo:
             </h3>
             <div className={styles.recomendados}>
                 {pratosRecomendados.map(item => (
@@ -24,7 +24,7 @@ export default function Inicio() {
                         <div className={styles.recomendado__imagem}>
                             <img src={item.photo} alt={item.title} />
                         </div>
-                        <button 
+                        <button
                             className={styles.recomendado__botao}
                             onClick={() => redirecionarParaDetalhes(item)}
                         >
@@ -33,13 +33,13 @@ export default function Inicio() {
                     </div>
                 ))}
             </div>
-            <h3 className={stylesTema.titulo}>Nossa casa</h3>
+            {/* <h3 className={stylesTema.titulo}>Nossa casa</h3>
             <div className={styles.nossaCasa}>
                 <img src={nossaCasa} alt='Casa do aluroni' />
                 <div className={styles.nossaCasa__endereco}>
                     Rua Vergueiro, 3185 <br /> <br /> Vila Mariana - SP
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 }
