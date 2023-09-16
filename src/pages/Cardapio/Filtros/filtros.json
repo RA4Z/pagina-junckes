@@ -1,18 +1,14 @@
 [
     {
-      "label": "Massas",
+      "label": "Cachaças",
       "id": 1
     },
     {
-      "label": "Carnes",
+      "label": "Licores",
       "id": 2
     },
     {
-      "label": "Combos",
+      "label": "Batidas",
       "id": 3
-    },
-    {
-      "label": "Veganos",
-      "id": 4
     }
   ]
